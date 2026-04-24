@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método Latillionaires | Metodo Exclusivo</title>
+  <meta name="description" content="Descarga el Metodo exclusivo del Método Latillionaires y descubre una nueva forma de pensar, organizar y elevar tu vida financiera." />
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#F2CA50',
+            primaryDeep: '#D4AF37',
+            background: '#070707',
+            surface: '#111111',
+            surfaceSoft: '#181818',
+            surfaceCard: '#141414',
+            borderSoft: 'rgba(242,202,80,0.14)',
+            textMain: '#F6F2E8',
+            textSoft: '#BDB5A3',
+            textMuted: '#8A8376'
+          },
+          boxShadow: {
+            glow: '0 0 0 1px rgba(242,202,80,0.08), 0 20px 60px rgba(0,0,0,0.55)',
+            gold: '0 12px 40px rgba(242,202,80,0.18)',
+            soft: '0 20px 60px rgba(0,0,0,0.35)'
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            headline: ['Manrope', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      min-height: 100dvh;
+      background:
+        radial-gradient(circle at top left, rgba(242,202,80,0.10), transparent 30%),
+        radial-gradient(circle at 85% 12%, rgba(242,202,80,0.06), transparent 24%),
+        linear-gradient(180deg, #090909 0%, #0b0b0b 24%, #070707 100%);
+      color: #F6F2E8;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.035;
+      z-index: 1;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 160px;
+    }
+    .gold-text {
+      background: linear-gradient(135deg, #f8d978 0%, #f2ca50 35%, #d4af37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass {
+      background: rgba(10, 10, 10, 0.72);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(242,202,80,0.10);
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #f8d978 0%, #f2ca50 50%, #d4af37 100%);
+      color: #1f1700;
+      box-shadow: 0 12px 30px rgba(242,202,80,0.18);
+      transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 42px rgba(242,202,80,0.24);
+      filter: brightness(1.03);
+    }
+    .btn-outline {
+      border: 1px solid rgba(242,202,80,0.20);
+      background: rgba(255,255,255,0.02);
+      transition: all .22s ease;
+    }
+    .btn-outline:hover {
+      border-color: rgba(242,202,80,0.45);
+      background: rgba(242,202,80,0.05);
+      transform: translateY(-2px);
+    }
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(242,202,80,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(242,202,80,0.05) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 20%, rgba(0,0,0,0.18) 70%, transparent 100%);
+    }
+    .section-line::after {
+      content: '';
+      display: block;
+      width: 72px;
+      height: 1px;
+      margin-top: 12px;
+      background: linear-gradient(90deg, #f2ca50, transparent);
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .card-hover {
+      transition: transform .25s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      border-color: rgba(242,202,80,0.24);
+      background: rgba(255,255,255,0.03);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+    }
+    .number-outline {
+      -webkit-text-stroke: 1px rgba(242,202,80,0.16);
+      color: transparent;
+    }
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(7,7,7,0) 0%, rgba(7,7,7,0.24) 58%, rgba(7,7,7,0.82) 100%);
+      pointer-events: none;
+    }
+    .hero-orb { filter: blur(60px); opacity: .5; }
+    .field {
+      background: transparent;
+      border: 1px solid rgba(242,202,80,0.14);
+      transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .field:focus {
+      border-color: rgba(242,202,80,0.5);
+      box-shadow: 0 0 0 4px rgba(242,202,80,0.08);
+      background: rgba(255,255,255,0.02);
+    }
+    .timeline-line {
+      position: absolute;
+      left: 15px;
+      top: 18px;
+      bottom: -18px;
+      width: 1px;
+      background: linear-gradient(180deg, rgba(242,202,80,0.35), rgba(242,202,80,0));
+    }
+    .modal-backdrop {
+      background: rgba(0, 0, 0, 0.68);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .hide-scroll { overflow: hidden; }
+    @media (max-width: 768px) { .hero-grid { background-size: 34px 34px; } }
+  </style>
+
+<style>
+.neon-gold{
+color:#f2ca50;
+text-shadow:
+0 0 5px #f2ca50,
+0 0 10px #f2ca50,
+0 0 20px #d4af37,
+0 0 40px rgba(212,175,55,0.8);
+}
+</style>
+
+</head>
+<body class="font-body bg-background text-textMain selection:bg-primary selection:text-black">
+  <div class="fixed inset-0 pointer-events-none z-0 hero-grid"></div>
+  <div class="absolute top-0 left-[6%] h-56 w-56 rounded-full bg-primary/12 hero-orb"></div>
+  <div class="absolute top-[22rem] right-[6%] h-56 w-56 rounded-full bg-primary/10 hero-orb"></div>
+
+  <header class="fixed top-0 inset-x-0 z-50 px-4 md:px-8 pt-4">
+    <nav class="glass mx-auto max-w-7xl rounded-full px-4 md:px-6 py-3 shadow-soft">
+      <div class="flex items-center justify-between gap-4">
+        <a href="#inicio" class="flex items-center gap-3 min-w-0">
+          <div class="h-12 w-12 rounded-full border border-primary/20 bg-black/40 flex items-center justify-center overflow-hidden shadow-[0_0_18px_rgba(212,175,55,0.12)]">
+            <img src="https://assets.cdn.filesafe.space/PUVUfiYjWWOwqkFaSWkQ/media/67c1b66bfedf5f5573a17d9d.png" style="height:60px" alt="Logo Latillionaires" class="h-7 w-7 object-contain" />
+          </div>
+          <div class="min-w-0">
+            <p class="font-headline font-extrabold text-sm tracking-[0.35em] text-primary uppercase">Latillionaires</p>
+            <p class="text-[10px] md:text-xs text-textMuted uppercase tracking-[0.25em]">Método de Maestría Financiera</p>
+          </div>
+        </a>
+        <div class="hidden lg:flex items-center gap-8 text-xs uppercase tracking-[0.24em] text-textSoft">
+          <a href="#metodo" class="hover:text-primary transition-colors">Método</a>
+          <a href="#beneficios" class="hover:text-primary transition-colors">Beneficios</a>
+          <a href="#valor" class="hover:text-primary transition-colors">Para quién es</a>
+        </div>
+        <button type="button" class="btn-gold open-lead-modal shrink-0 rounded-full px-5 md:px-6 py-3 text-[11px] md:text-xs font-semibold uppercase tracking-[0.25em]">Quiero el PDF</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="relative z-10">
+    <section id="inicio" class="relative min-h-screen flex items-center px-4 md:px-8 pt-28 md:pt-36 pb-16">
+      <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-[1.08fr_0.92fr] gap-12 items-center">
+        <div class="reveal">
+          <div class="inline-flex items-center gap-3 rounded-full border border-primary/15 bg-white/[0.02] px-4 py-2 text-[11px] uppercase tracking-[0.32em] text-primary mb-7">
+            <span class="h-2 w-2 rounded-full bg-primary"></span>
+            Metodo exclusivo
+          </div>
+          <h1 class="font-display text-5xl md:text-7xl xl:text-[5.8rem] leading-[0.92] tracking-tight max-w-4xl">
+            Eleva tu forma de pensar el dinero y
+            <span class="gold-text block">construye patrimonio con dirección</span>
+          </h1>
+          <p class="mt-7 max-w-2xl text-base md:text-lg text-textSoft leading-8">
+            Descarga el Metodo del Método Latillionaires y descubre una forma más clara, intencional y estratégica de organizar tus decisiones financieras.
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row gap-4">
+            <button type="button" class="btn-gold open-lead-modal rounded-full px-8 py-4 text-sm font-bold uppercase tracking-[0.2em] text-center">Descargar el Metodo</button>
+            <a href="#metodo" class="btn-outline rounded-full px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-center text-textMain">Ver el método</a>
+          </div>
+          <div class="mt-10 grid sm:grid-cols-3 gap-4 max-w-3xl">
+            <div class="glass rounded-2xl p-4">
+              <p class="text-2xl font-headline font-extrabold text-primary">01</p>
+              <p class="mt-2 text-xs uppercase tracking-[0.24em] text-textMuted">Claridad</p>
+            </div>
+            <div class="glass rounded-2xl p-4">
+              <p class="text-2xl font-headline font-extrabold text-primary">02</p>
+              <p class="mt-2 text-xs uppercase tracking-[0.24em] text-textMuted">Estrategia</p>
+            </div>
+            <div class="glass rounded-2xl p-4">
+              <p class="text-2xl font-headline font-extrabold text-primary">03</p>
+              <p class="mt-2 text-xs uppercase tracking-[0.24em] text-textMuted">Expansión</p>
+            </div>
+          </div>
+          <div class="mt-6 inline-flex items-center gap-3 rounded-full border border-primary/12 bg-white/[0.02] px-4 py-3">
+            <div class="h-9 w-9 rounded-full bg-black/40 border border-primary/10 flex items-center justify-center overflow-hidden">
+              <img src="https://assets.cdn.filesafe.space/PUVUfiYjWWOwqkFaSWkQ/media/67c1b66bfedf5f5573a17d9d.png" style="height:60px" alt="Logo Latillionaires" class="h-5 w-5 object-contain" />
+            </div>
+            <p class="text-[11px] uppercase tracking-[0.26em] text-textMuted">Comunidad de visión, estructura y expansión</p>
+          </div>
+        </div>
+
+        <div class="reveal lg:justify-self-end w-full">
+          <div class="glass rounded-[2rem] p-3 md:p-4 shadow-glow max-w-2xl ml-auto">
+            <div class="hero-image relative overflow-hidden rounded-[1.6rem] border border-white/5">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsKJkNPfRKe1g264fDBxMgDhPbWWrQtMNWbZec9ewOmVCcB0dP-mWBepl7a9yWjWS1_aCsbw0lIxD6unkUW34IOm9pqHJk9fzDIFp95aseqGE5g5Jlkf5TEkU2r5yvPPPhGgGfKawzDdQnUl_e9OCBCZWOGTqxyD_3qJlucYgNmWSDtxtqDk41A79gXBmS60GFh3GWbf7QZwWpTzpcUnVUMAonTQlEG7cqYXpUGPWSCKibRyZybpCZ55kYBwSjRMPQWOvP17xb-J0" alt="Interior elegante con vista panorámica que representa visión, expansión y patrimonio" class="w-full h-[560px] md:h-[660px] object-cover" />
+              <div class="absolute inset-x-0 bottom-0 p-5 md:p-6">
+                <div class="glass rounded-2xl p-5">
+                  <p class="text-[11px] uppercase tracking-[0.32em] text-primary">Acceso inmediato</p>
+                  <h2 class="mt-3 font-headline text-xl md:text-2xl font-bold leading-snug">Regístrate y recibe el archivo exclusivo para comenzar con una visión financiera más clara, más fuerte y mejor estructurada.</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 md:px-8 pb-12 md:pb-16">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-4">
+        <div class="glass rounded-3xl p-6 reveal card-hover">
+          <p class="text-[11px] uppercase tracking-[0.3em] text-primary">Piensa mejor</p>
+          <h3 class="mt-3 font-headline text-2xl font-bold">Mentalidad con intención</h3>
+          <p class="mt-3 text-textSoft leading-7">Aprende a dejar atrás la improvisación financiera y empezar a tomar decisiones con más visión y más dirección.</p>
+        </div>
+        <div class="glass rounded-3xl p-6 reveal card-hover">
+          <p class="text-[11px] uppercase tracking-[0.3em] text-primary">Ordénate mejor</p>
+          <h3 class="mt-3 font-headline text-2xl font-bold">Estructura tu estrategia</h3>
+          <p class="mt-3 text-textSoft leading-7">Identifica prioridades, fortalece tu enfoque y organiza tu crecimiento con una base financiera más sólida.</p>
+        </div>
+        <div class="glass rounded-3xl p-6 reveal card-hover">
+          <p class="text-[11px] uppercase tracking-[0.3em] text-primary">Avanza mejor</p>
+          <h3 class="mt-3 font-headline text-2xl font-bold">Construye patrimonio</h3>
+          <p class="mt-3 text-textSoft leading-7">No se trata solo de aprender más sobre dinero. Se trata de avanzar con intención y construir una vida financiera más fuerte.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="metodo" class="px-4 md:px-8 py-20 md:py-28 bg-white/[0.02] border-y border-primary/10">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-[0.95fr_1.05fr] gap-14 items-start">
+        <div class="reveal">
+          <p class="section-line text-[11px] uppercase tracking-[0.35em] text-primary">El método</p>
+          <h2 class="mt-5 font-display text-4xl md:text-6xl leading-tight">La mayoría no necesita más información. Necesita una <span class="gold-text">mejor estructura</span>.</h2>
+          <p class="mt-6 text-lg text-textSoft leading-8 max-w-xl">
+            El Método Latillionaires ayuda a ordenar mentalidad, visión y estrategia para que tus decisiones no nazcan del miedo, sino de claridad, intención y crecimiento.
+          </p>
+          <div class="mt-10 grid grid-cols-2 gap-4 max-w-lg">
+            <div class="rounded-3xl border border-primary/10 bg-black/20 p-5">
+              <p class="text-4xl font-headline font-extrabold text-primary">3</p>
+              <p class="mt-2 text-sm text-textSoft leading-6">Pilares para elevar tu relación con el dinero.</p>
+            </div>
+            <div class="rounded-3xl border border-primary/10 bg-black/20 p-5">
+              <p class="text-4xl font-headline font-extrabold text-primary">1</p>
+              <p class="mt-2 text-sm text-textSoft leading-6">Metodo descargable para empezar con dirección.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="relative pl-12 reveal">
+            <span class="timeline-line"></span>
+            <div class="absolute left-0 top-0 h-8 w-8 rounded-full border border-primary/30 bg-primary/10 flex items-center justify-center text-primary font-bold">1</div>
+            <div class="glass rounded-3xl p-6 card-hover">
+              <p class="text-[11px] uppercase tracking-[0.28em] text-primary">Mentalidad soberana</p>
+              <h3 class="mt-3 font-headline text-2xl font-bold">Primero piensas diferente</h3>
+              <p class="mt-3 text-textSoft leading-7">Cambias tu forma de interpretar el dinero para dejar de operar desde presión, urgencia o desorden.</p>
+            </div>
+          </div>
+          <div class="relative pl-12 reveal">
+            <span class="timeline-line"></span>
+            <div class="absolute left-0 top-0 h-8 w-8 rounded-full border border-primary/30 bg-primary/10 flex items-center justify-center text-primary font-bold">2</div>
+            <div class="glass rounded-3xl p-6 card-hover">
+              <p class="text-[11px] uppercase tracking-[0.28em] text-primary">Arquitectura financiera</p>
+              <h3 class="mt-3 font-headline text-2xl font-bold">Luego organizas tu estrategia</h3>
+              <p class="mt-3 text-textSoft leading-7">Identificas prioridades, entiendes mejor tus decisiones y construyes una base más clara para crecer.</p>
+            </div>
+          </div>
+          <div class="relative pl-12 reveal">
+            <div class="absolute left-0 top-0 h-8 w-8 rounded-full border border-primary/30 bg-primary/10 flex items-center justify-center text-primary font-bold">3</div>
+            <div class="glass rounded-3xl p-6 card-hover">
+              <p class="text-[11px] uppercase tracking-[0.28em] text-primary">Expansión patrimonial</p>
+              <h3 class="mt-3 font-headline text-2xl font-bold">Finalmente ejecutas con dirección</h3>
+              <p class="mt-3 text-textSoft leading-7">El objetivo no es solo saber más. Es tomar mejores decisiones y construir una vida financiera con más solidez.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios" class="px-4 md:px-8 py-20 md:py-28">
+      <div class="max-w-7xl mx-auto">
+        <div class="max-w-3xl reveal">
+          <p class="section-line text-[11px] uppercase tracking-[0.35em] text-primary">Lo que vas a encontrar</p>
+          <h2 class="mt-5 font-display text-4xl md:text-6xl leading-tight">Un recurso diseñado para ayudarte a ver tu vida financiera con más claridad.</h2>
+        </div>
+        <div class="mt-14 grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+          <article class="glass rounded-3xl p-7 reveal card-hover">
+            <p class="number-outline text-5xl font-headline font-extrabold">01</p>
+            <h3 class="mt-4 font-headline text-xl font-bold">Enfoque</h3>
+            <p class="mt-3 text-textSoft leading-7">Una forma más consciente de pensar tus decisiones financieras.</p>
+          </article>
+          <article class="glass rounded-3xl p-7 reveal card-hover">
+            <p class="number-outline text-5xl font-headline font-extrabold">02</p>
+            <h3 class="mt-4 font-headline text-xl font-bold">Orden</h3>
+            <p class="mt-3 text-textSoft leading-7">Una base para organizar prioridades y dejar atrás la improvisación.</p>
+          </article>
+          <article class="glass rounded-3xl p-7 reveal card-hover">
+            <p class="number-outline text-5xl font-headline font-extrabold">03</p>
+            <h3 class="mt-4 font-headline text-xl font-bold">Dirección</h3>
+            <p class="mt-3 text-textSoft leading-7">Una guía para avanzar con más intención y visión de largo plazo.</p>
+          </article>
+          <article class="glass rounded-3xl p-7 reveal card-hover">
+            <p class="number-outline text-5xl font-headline font-extrabold">04</p>
+            <h3 class="mt-4 font-headline text-xl font-bold">Acción</h3>
+            <p class="mt-3 text-textSoft leading-7">Un primer paso concreto para empezar a fortalecer tu estructura financiera.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="valor" class="px-4 md:px-8 pb-20 md:pb-28">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-[0.86fr_1.14fr] gap-10 items-stretch">
+        <div class="glass rounded-[2rem] p-8 md:p-10 reveal shadow-glow">
+          <p class="text-[11px] uppercase tracking-[0.34em] text-primary">Ideal para ti si</p>
+          <h2 class="mt-5 font-display text-4xl md:text-5xl leading-tight">Quieres elevar tu educación financiera y empezar a tomar decisiones con más intención.</h2>
+          <div class="mt-10 space-y-5">
+            <div class="rounded-2xl border border-primary/10 bg-white/[0.02] p-5 flex gap-4 items-start">
+              <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+              <div>
+                <h3 class="font-headline font-bold text-lg">Si quieres más claridad</h3>
+                <p class="text-sm text-textSoft leading-6 mt-1">Para entender mejor cómo ordenar tu visión, tus prioridades y tu relación con el dinero.</p>
+              </div>
+            </div>
+            <div class="rounded-2xl border border-primary/10 bg-white/[0.02] p-5 flex gap-4 items-start">
+              <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+              <div>
+                <h3 class="font-headline font-bold text-lg">Si sientes que te falta estructura</h3>
+                <p class="text-sm text-textSoft leading-6 mt-1">Para salir del modo reactivo y empezar a construir una base financiera más sólida.</p>
+              </div>
+            </div>
+            <div class="rounded-2xl border border-primary/10 bg-white/[0.02] p-5 flex gap-4 items-start">
+              <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+              <div>
+                <h3 class="font-headline font-bold text-lg">Si quieres avanzar con visión</h3>
+                <p class="text-sm text-textSoft leading-6 mt-1">Para dejar de tomar decisiones aisladas y empezar a construir patrimonio con más intención.</p>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn-gold open-lead-modal mt-10 w-full rounded-2xl px-6 py-5 text-sm font-extrabold uppercase tracking-[0.24em]">Solicitar acceso al PDF</button>
+        </div>
+
+        <div class="glass rounded-[2rem] p-8 md:p-10 reveal shadow-glow flex flex-col justify-between">
+          <div>
+            <p class="text-[11px] uppercase tracking-[0.34em] text-primary">Acceso al recurso</p>
+            <h3 class="mt-3 font-headline text-2xl md:text-3xl font-bold">Completa el formulario y recibe el archivo</h3>
+            <p class="mt-5 text-textSoft leading-8 text-base md:text-lg">Por tu flujo con Toolyx, todos los botones de la página abren primero el formulario obligatorio. Una vez se envían los datos, se dispara la descarga del PDF.</p>
+          </div>
+          <div class="mt-10 grid sm:grid-cols-2 gap-4">
+            <div class="rounded-2xl border border-primary/10 bg-white/[0.02] p-5">
+              <p class="text-[11px] uppercase tracking-[0.28em] text-primary">Paso 1</p>
+              <p class="mt-3 font-headline text-xl font-bold">Diligencias tus datos</p>
+            </div>
+            <div class="rounded-2xl border border-primary/10 bg-white/[0.02] p-5">
+              <p class="text-[11px] uppercase tracking-[0.28em] text-primary">Paso 2</p>
+              <p class="mt-3 font-headline text-xl font-bold">Recibes el archivo</p>
+            </div>
+          </div>
+          <button type="button" class="btn-outline open-lead-modal mt-8 rounded-2xl px-6 py-5 text-sm font-semibold uppercase tracking-[0.22em] text-textMain">Abrir formulario</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button type="button" class="open-lead-modal fixed bottom-6 right-6 z-[60] h-16 w-16 rounded-full bg-[#25D366] shadow-[0_0_30px_rgba(37,211,102,0.45)] flex items-center justify-center hover:scale-105 transition-transform" aria-label="Abrir formulario">
+    <svg class="w-9 h-9" viewBox="0 0 32 32" aria-hidden="true" fill="none">
+      <path fill="#fff" d="M19.11 17.38c-.27-.14-1.62-.8-1.87-.89-.25-.09-.43-.14-.61.14-.18.27-.7.89-.86 1.07-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.16-1.35-.8-.71-1.34-1.58-1.49-1.84-.16-.27-.02-.41.12-.54.12-.12.27-.32.41-.48.14-.16.18-.27.27-.46.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.93-.96 2.27s.98 2.64 1.11 2.82c.14.18 1.92 2.93 4.64 4.1.65.28 1.16.45 1.55.58.65.21 1.25.18 1.72.11.53-.08 1.62-.66 1.85-1.3.23-.64.23-1.18.16-1.3-.07-.11-.25-.18-.52-.32Z"/>
+      <path fill="#fff" fill-rule="evenodd" d="M16 3C8.82 3 3 8.72 3 15.78c0 2.48.74 4.78 2.01 6.72L3.2 29l6.72-1.76A13.1 13.1 0 0 0 16 28.56C23.18 28.56 29 22.84 29 15.78 29 8.72 23.18 3 16 3Zm0 23.42a10.9 10.9 0 0 1-5.56-1.52l-.4-.24-3.98 1.04 1.06-3.85-.26-.39a10.58 10.58 0 0 1-1.66-5.68C5.2 9.9 10.04 5.14 16 5.14s10.8 4.76 10.8 10.64c0 5.88-4.84 10.64-10.8 10.64Z" clip-rule="evenodd"/>
+    </svg>
+  </button>
+
+  <footer class="relative z-10 border-t border-primary/10 bg-black/35 px-4 md:px-8 py-12">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-8 items-start lg:items-center">
+      <div class="flex items-center gap-4">
+        <div class="h-14 w-14 rounded-full border border-primary/15 bg-black/40 flex items-center justify-center overflow-hidden shadow-[0_0_18px_rgba(212,175,55,0.10)]">
+          <img src="https://assets.cdn.filesafe.space/PUVUfiYjWWOwqkFaSWkQ/media/67c1b66bfedf5f5573a17d9d.png" style="height:60px" alt="Logo Latillionaires" class="h-8 w-8 object-contain" />
+        </div>
+        <div>
+          <p class="font-headline font-extrabold text-primary tracking-[0.35em] uppercase">Latillionaires</p>
+          <p class="mt-3 text-sm text-textMuted">© 2026 Método Latillionaires. Todos los derechos reservados.</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-6 text-sm text-textSoft">
+        <a href="#metodo" class="hover:text-primary transition-colors">El método</a>
+        <a href="#beneficios" class="hover:text-primary transition-colors">Beneficios</a>
+        <button type="button" class="open-lead-modal hover:text-primary transition-colors">Descarga</button>
+      </div>
+    </div>
+  
+<section style="padding:80px 20px;background:#0f0f0f;text-align:center">
+<h2 style="font-size:36px;margin-bottom:20px;color:#d4af37"><span class="neon-gold">Una comunidad de líderes</span></h2>
+<p style="max-width:800px;margin:0 auto 40px;color:#cccccc;font-size:18px">
+Latillionaires no es solo educación financiera. Es una comunidad de personas que están construyendo patrimonio, liderazgo y oportunidades juntos.
+</p>
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" style="max-width:100%;border-radius:12px;box-shadow:0 20px 40px rgba(0,0,0,0.6)">
+</section>
+
+
+
+  <div id="leadModal" class="fixed inset-0 z-[100] hidden items-center justify-center px-4 modal-backdrop">
+    <div class="glass w-full max-w-2xl rounded-[2rem] p-7 md:p-10 shadow-glow relative">
+      <button id="closeLeadModal" type="button" class="absolute top-4 right-4 h-11 w-11 rounded-full border border-primary/15 bg-white/[0.03] text-textMain hover:border-primary/40 hover:text-primary transition-colors" aria-label="Cerrar formulario">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+
+      <div class="pr-10 md:pr-14">
+        <div class="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-full border border-primary/15 bg-black/30 overflow-hidden shadow-[0_0_20px_rgba(212,175,55,0.10)]">
+          <img src="https://assets.cdn.filesafe.space/PUVUfiYjWWOwqkFaSWkQ/media/67c1b66bfedf5f5573a17d9d.png" style="height:60px" alt="Logo Latillionaires" class="h-8 w-8 object-contain" />
+        </div>
+        <p class="text-[11px] uppercase tracking-[0.34em] text-primary">Acceso al archivo</p>
+        <h2 class="mt-4 font-display text-4xl md:text-5xl leading-tight">Completa tus datos para descargar el PDF</h2>
+        <p class="mt-4 text-textSoft leading-7">Este paso es obligatorio. Cuando envíes el formulario, el sistema abrirá automáticamente el archivo descargable.</p>
+      </div>
+
+      <form id="leadForm" class="mt-8 space-y-5">
+        <div>
+          <label for="name" class="block text-[11px] uppercase tracking-[0.28em] text-primary mb-3">Nombre completo</label>
+          <input id="name" name="name" type="text" required placeholder="Escribe tu nombre" class="field w-full rounded-2xl px-5 py-4 bg-transparent outline-none text-textMain placeholder:text-textMuted" />
+        </div>
+        <div>
+          <label for="email" class="block text-[11px] uppercase tracking-[0.28em] text-primary mb-3">Correo electrónico</label>
+          <input id="email" name="email" type="email" required placeholder="tu@email.com" class="field w-full rounded-2xl px-5 py-4 bg-transparent outline-none text-textMain placeholder:text-textMuted" />
+        </div>
+        <div>
+          <label for="phone" class="block text-[11px] uppercase tracking-[0.28em] text-primary mb-3">Teléfono</label>
+          <input id="phone" name="phone" type="tel" required placeholder="Tu número de teléfono" class="field w-full rounded-2xl px-5 py-4 bg-transparent outline-none text-textMain placeholder:text-textMuted" />
+        </div>
+
+        <button id="submitLeadBtn" type="submit" class="btn-gold w-full rounded-2xl px-6 py-5 text-sm font-extrabold uppercase tracking-[0.24em] flex items-center justify-center gap-3">
+          Registrarme y descargar PDF
+          <span class="material-symbols-outlined">download</span>
+        </button>
+
+        <p id="formMessage" class="hidden rounded-2xl border border-primary/15 bg-primary/10 px-4 py-3 text-sm text-primary"></p>
+        <p class="text-xs text-textMuted leading-6">Al enviar tus datos, la descarga del PDF comenzará automáticamente.</p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const pdfLink = 'https://assets.cdn.filesafe.space/PUVUfiYjWWOwqkFaSWkQ/media/69e1ca1c2c135a8c83bdd4be.pdf';
+
+    // Reemplaza este valor con tu endpoint real de Toolyx si deseas enviar el lead directamente al CRM.
+    // Ejemplo: const toolyxWebhookUrl = 'https://tu-dominio-toolyx.com/webhook/lead';
+    const toolyxWebhookUrl = '';
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+    const body = document.body;
+    const leadModal = document.getElementById('leadModal');
+    const closeLeadModal = document.getElementById('closeLeadModal');
+    const openButtons = document.querySelectorAll('.open-lead-modal');
+    const form = document.getElementById('leadForm');
+    const formMessage = document.getElementById('formMessage');
+    const submitLeadBtn = document.getElementById('submitLeadBtn');
+
+    function openModal() {
+      leadModal.classList.remove('hidden');
+      leadModal.classList.add('flex');
+      body.classList.add('hide-scroll');
+      setTimeout(() => document.getElementById('name').focus(), 60);
+    }
+
+    function closeModal() {
+      leadModal.classList.add('hidden');
+      leadModal.classList.remove('flex');
+      body.classList.remove('hide-scroll');
+    }
+
+    openButtons.forEach(btn => btn.addEventListener('click', openModal));
+    closeLeadModal.addEventListener('click', closeModal);
+
+    leadModal.addEventListener('click', (e) => {
+      if (e.target === leadModal) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !leadModal.classList.contains('hidden')) closeModal();
+    });
+
+    async function sendLeadToToolyx(payload) {
+      if (!toolyxWebhookUrl) return { ok: true, skipped: true };
+      const response = await fetch(toolyxWebhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!response.ok) throw new Error('No fue posible registrar el lead en Toolyx.');
+      return { ok: true };
+    }
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const payload = {
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        source: 'Landing Metodo Latillionaires',
+        download_file: pdfLink,
+        submitted_at: new Date().toISOString()
+      };
+
+      if (!payload.name || !payload.email || !payload.phone) {
+        formMessage.textContent = 'Por favor completa todos los campos para continuar.';
+        formMessage.classList.remove('hidden');
+        return;
+      }
+
+      submitLeadBtn.disabled = true;
+      submitLeadBtn.classList.add('opacity-80', 'cursor-not-allowed');
+      formMessage.textContent = 'Estamos procesando tu registro y preparando tu descarga...';
+      formMessage.classList.remove('hidden');
+
+      try {
+        await sendLeadToToolyx(payload);
+        formMessage.textContent = 'Registro completado. Tu archivo se abrirá en una nueva pestaña.';
+        setTimeout(() => {
+          window.open(pdfLink, '_blank', 'noopener');
+          closeModal();
+          form.reset();
+          submitLeadBtn.disabled = false;
+          submitLeadBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+        }, 350);
+      } catch (error) {
+        console.error(error);
+        submitLeadBtn.disabled = false;
+        submitLeadBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+        formMessage.textContent = 'No se pudo enviar el formulario al CRM. Revisa el webhook de Toolyx y vuelve a intentar.';
+      }
+    });
+  </script>
+
+<footer style="background:#050507;border-top:1px solid rgba(212,168,67,0.2);padding:40px 20px;text-align:center">
+<img src="https://assets.cdn.filesafe.space/PUVUfiYjWWOwqkFaSWkQ/media/67c1b66bfedf5f5573a17d9d.png" style="height:50px;margin-bottom:10px">
+<p style="color:#888;font-size:12px;letter-spacing:1px">© LATILLIONAIRES — Comunidad de educación financiera</p>
+</footer>
+</body>
+</html>
